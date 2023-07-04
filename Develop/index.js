@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inq = require('inquirer');
 const fs = require('fs');
-const generateMarkdown = require('./generateMarkdown.js');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -45,14 +45,9 @@ const questions = [
         name: 'github',
         message: 'Github username.'
     },
-    {
-        type: 'input',
-        name: 'addlquestions',
-        message: 'References and Others.'
-    },
     
     {
-        type: 'rawlist',
+        type: 'list',
         name: 'license',
         message: 'Choose a license for your project by selecting a number. Note: it is recommended that you save a separate LICENSE file in the root of the repository. Refer to https://choosealicense.com/ for further details.',
         choices: [
@@ -78,7 +73,7 @@ function writeToFile(fileName, data) {
 function init() {
     inq.prompt(questions).then((data) => {
         console.log(data)
-    fs.writeFile('GeneratedREADME/GeneratedREADME.md', generateMarkdown(data),(err) => err? console.error(err) : console.log("Success!"))})
+    fs.writeFile('GeneratedREADME.md', generateMarkdown(data),(err) => err? console.error(err) : console.log("Success!"))})
 }
 
 // Function call to initialize app
