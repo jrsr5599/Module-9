@@ -8,32 +8,32 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'Title of the project.'
+        message: 'Project title.'
     },
     {
         type: 'input',
         name: 'description',
-        message: 'Description of the project.'
+        message: 'Project Description.'
     },
     {
         type: 'input',
         name: 'installation',
-        message: 'Installation instructions for the project.'
+        message: 'Instructions for installation of Project.'
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'Instructions, examples and images for on how to use.'
+        message: 'Examples and instructions on how to use.'
     },
     {
         type: 'input',
         name: 'contributing',
-        message: 'Contribution instructions for other developers'
+        message: 'Instructions for contributions for other developers'
     },
     {
         type: 'input',
         name: 'tests',
-        message: 'Testing protocols for the project.'
+        message: 'Protocol Testing.'
     },
     {
         type: 'input',
@@ -53,11 +53,11 @@ const questions = [
         choices: [
             'Apache license 2.0',
             'Creative Commons Zero v1.0 Universal',
-            'Do What The F*ck You Want To Public License',
+            'Harvard License',
             'GNU General Public License v3.0',
             'ISC',
             'MIT',
-            'The Unlicense'
+            'Michigan license for winners'
         ],
         default: 'MIT'
         
